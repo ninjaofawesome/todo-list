@@ -26,12 +26,13 @@ class Form extends Component {
   }
 
   addTodo(val){
+    const todo = {text: val}
 
-    axios.post(this.apiUrl)
+    axios.post(this.apiUrl, todo)
       .then((res) => {
         this.state.data(res.data);
-        this.setState({ data: this.state.data })
-      });
+        this.setState({data: this.state.data})
+    });
   }
 
   handleRemove(id) {
@@ -42,11 +43,12 @@ class Form extends Component {
       return null;
     });
 
+    this.setState({data: remainder});
+
     axios.delete(this.apiUrl+'/'+id)
       .then((res) => {
         this.setState({ data: remainder })
       });
-
   }
 
   render () {

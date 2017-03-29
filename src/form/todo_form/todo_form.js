@@ -1,7 +1,6 @@
 import React from 'react';
-import Button from '../../button/button';
 
-export default function TodoForm(data) {
+export default function TodoForm({addTodo}) {
 
   let input;
 
@@ -11,10 +10,10 @@ export default function TodoForm(data) {
         input = node;
       }} />
 
-      <Button onClick={() => {
-        this.props.addTodo(input.value);
+      <button onClick={() => {
+        addTodo(input.value);
         input.value = '';
-      }} />
+      }}> + </button>
     </div>
   );
 

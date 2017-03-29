@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-class Header extends Component {
-  render () {
-    return (
-      <div>
-        <h2>Todo List</h2>
-      </div>
-    );
-  }
+export default function header({todoCount}){
+  return (
+    <div>
+       <div>
+          <h1>to-do ({todoCount})</h1>
+       </div>
+    </div>
+  );
 }
-
-export default Header;

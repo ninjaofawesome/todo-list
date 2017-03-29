@@ -1,7 +1,10 @@
 import React from 'react';
 
-export default function Todo({todo, remove}) {
+export default function todo({todo, remove}){
   return (
-    <li onClick={remove(todo.id)}>{todo.text}</li>
+    <li>
+      <span>{todo.text}</span>
+      <button onClick={() => {remove(todo.id)}}>Remove</button>
+    </li>
   );
 }

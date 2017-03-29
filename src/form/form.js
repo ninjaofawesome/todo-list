@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import Header from '../header/header';
-import TodoForm from './todo_form/todo_form';
+import TodoFormInput from './todo_form_input/todo_form_input';
 import TodoList from './todo_list/todo_list';
 import axios from 'axios';
 
+console.clear();
+
 window.id = 0;
-
 class Form extends Component {
-
-  constructor(props) {
+  constructor(props){
     super(props);
-
     this.state = {
       data: []
     }
@@ -21,48 +20,57 @@ class Form extends Component {
   componentDidMount(){
     axios.get(this.apiUrl)
       .then((res) => {
-        this.setState({ data:res.data });
-      })
+        this.setState({data:res.data});
+      });
   }
 
   addTodo(val){
+
     const todo = {text: val}
 
     axios.post(this.apiUrl, todo)
-      .then((res) => {
-        this.state.data(res.data);
-        this.setState({data: this.state.data})
-    });
+       .then((res) => {
+          this.state.data.push(res.data);
+          this.setState({data: this.state.data});
+       });
   }
 
-  handleRemove(id) {
+  handleRemove(id){
     const remainder = this.state.data.filter((todo) => {
       if(todo.id !== id) {
         return todo;
       }
+
       return null;
     });
 
-    this.setState({data: remainder});
 
     axios.delete(this.apiUrl+'/'+id)
       .then((res) => {
-        this.setState({ data: remainder })
-      });
+        this.setState({data: remainder});
+      })
   }
 
-  render () {
+  render(){
     return (
-      <div>
-        <Header />
-        <TodoForm addTodo={this.addTodo.bind(this)} />
+      <section className="form">
+        <Header
+          className="form__title"
+          todoCount={this.state.data.length}
+        />
+        <TodoFormInput
+          className="form__input"
+          addTodo={this.addTodo.bind(this)}
+        />
         <TodoList
           todos={this.state.data}
           remove={this.handleRemove.bind(this)}
         />
-      </div>
+      </section>
     );
   }
+
+
 }
 
 export default Form;

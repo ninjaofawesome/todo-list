@@ -1,5 +1,9 @@
 @import '../node_modules/foundation-sites/scss/foundation.scss';
 
+@import '../src/styles/base';
+@import '../src/styles/variables';
+@import '../src/styles/mixins';
+
 @import '../src/button/button';
 @import '../src/header/header';
 @import '../src/form/form';

@@ -1,11 +1,5 @@
 import React from 'react';
 
 export default function header({todoCount}){
-  return (
-    <div>
-       <div>
-          <h1>to-do ({todoCount})</h1>
-       </div>
-    </div>
-  );
+  return <h1 className="form__title">to-do ({todoCount})</h1>;
 }

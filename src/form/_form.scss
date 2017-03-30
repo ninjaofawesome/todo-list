@@ -1,0 +1,11 @@
+.form {
+  @include flex-grid-column(4);
+
+  display: block;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

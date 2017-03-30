@@ -8,7 +8,7 @@ export default function todoForm({addTodo}){
       <input ref={node => {
         input = node;
       }} />
-      <button className="form__button--submit" onClick={() =>{
+      <button className="form__button" onClick={() =>{
         addTodo(input.value);
         input.value ='';
       }}>Add</button>

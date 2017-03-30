@@ -55,7 +55,6 @@ class Form extends Component {
     return (
       <section className="form">
         <Header
-          className="form__title"
           todoCount={this.state.data.length}
         />
         <TodoFormInput

@@ -11,20 +11,36 @@
 
   &__input {
     @include flex-grid-column(10);
+
     display: block;
     margin: 0 auto;
-    position: relative;
+    align-items: center;
   }
 
   &__input-field {
     width: 75%;
-    position: absolute;
-    left: 0;
   }
 
   &__button {
-    width: 25%;
-    position: absolute;
-    right: 0;
+    width: 20%;
   }
+}
+
+.form-list {
+  @include flex-grid-column(10);
+
+  display: block;
+  margin: rem-calc(5) auto;
+  align-items: center;
+  list-style-type: none;
+
+  &__item{
+    width: 75%;
+    margin-top: rem-calc(5);
+  }
+
+  &__button {
+    width: 20%;
+  }
+
 }

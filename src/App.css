@@ -50,7 +50,7 @@ body::after {
   max-width: 83.33333%;
   display: block;
   margin: 0 auto;
-  position: relative; }
+  align-items: center; }
 
 @media print, screen and (min-width: 40em) {
   .form__input {
@@ -58,11 +58,30 @@ body::after {
     padding-left: 0.9375rem; } }
 
 .form__input-field {
-  width: 75%;
-  position: absolute;
-  left: 0; }
+  width: 75%; }
 
 .form__button {
-  width: 25%;
-  position: absolute;
-  right: 0; }
+  width: 20%; }
+
+.form-list {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 83.33333%;
+  display: block;
+  margin: 0.3125rem auto;
+  align-items: center;
+  list-style-type: none; }
+
+@media print, screen and (min-width: 40em) {
+  .form-list {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem; } }
+
+.form-list__item {
+  width: 75%;
+  margin-top: 0.3125rem; }
+
+.form-list__button {
+  width: 20%; }

@@ -14,7 +14,7 @@ export default function todoInput({todos, remove}){
   });
 
   return (
-    <ul className="list-group">
+    <ul className="form-list">
       {todoNode}
     </ul>
   );

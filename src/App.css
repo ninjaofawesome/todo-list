@@ -41,3 +41,28 @@ body::after {
 .form__title {
   text-align: center;
   text-transform: uppercase; }
+
+.form__input {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 83.33333%;
+  display: block;
+  margin: 0 auto;
+  position: relative; }
+
+@media print, screen and (min-width: 40em) {
+  .form__input {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem; } }
+
+.form__input-field {
+  width: 75%;
+  position: absolute;
+  left: 0; }
+
+.form__button {
+  width: 25%;
+  position: absolute;
+  right: 0; }

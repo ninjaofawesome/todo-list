@@ -4,9 +4,6 @@ import TodoFormInput from './todo_form_input/todo_form_input';
 import TodoList from './todo_list/todo_list';
 import axios from 'axios';
 
-console.clear();
-
-window.id = 0;
 class Form extends Component {
   constructor(props){
     super(props);
@@ -25,9 +22,7 @@ class Form extends Component {
   }
 
   addTodo(val){
-
     const todo = {text: val}
-
     axios.post(this.apiUrl, todo)
        .then((res) => {
           this.state.data.push(res.data);
@@ -40,7 +35,6 @@ class Form extends Component {
       if(todo.id !== id) {
         return todo;
       }
-
       return null;
     });
 

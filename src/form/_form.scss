@@ -8,4 +8,23 @@
     text-align: center;
     text-transform: uppercase;
   }
+
+  &__input {
+    @include flex-grid-column(10);
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__input-field {
+    width: 75%;
+    position: absolute;
+    left: 0;
+  }
+
+  &__button {
+    width: 25%;
+    position: absolute;
+    right: 0;
+  }
 }

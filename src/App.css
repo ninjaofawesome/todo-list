@@ -7,7 +7,7 @@
 body,
 html {
   height: 100%;
-  overflow: auto; }
+  overflow: scroll; }
 
 body {
   max-width: 75rem;
@@ -48,9 +48,10 @@ body::after {
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   max-width: 83.33333%;
-  display: block;
+  display: flex;
   margin: 0 auto;
-  align-items: center; }
+  align-items: center;
+  flex-align: center; }
 
 @media print, screen and (min-width: 40em) {
   .form__input {
@@ -58,10 +59,27 @@ body::after {
     padding-left: 0.9375rem; } }
 
 .form__input-field {
-  width: 75%; }
+  width: 75%;
+  height: 1.25rem;
+  font-size: 1.5rem; }
 
 .form__button {
-  width: 20%; }
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  width: 20%;
+  color: #fff;
+  background: #a977a6;
+  border: 0;
+  height: 1.5625rem;
+  font-size: 1.25rem; }
+
+.form__button:active, .form__button:focus, .form__button:hover {
+  background: #cb8745; }
+
+.form__button:visited {
+  background: #a977a6; }
 
 .form-list {
   flex: 0 0 83.33333%;
@@ -80,8 +98,22 @@ body::after {
     padding-left: 0.9375rem; } }
 
 .form-list__item {
-  width: 75%;
+  width: 95%;
   margin-top: 0.3125rem; }
 
 .form-list__button {
-  width: 20%; }
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  width: 20%;
+  float: right;
+  color: #fff;
+  background: #c36652;
+  border: 0; }
+
+.form-list__button:active, .form-list__button:focus, .form-list__button:hover {
+  background: #bc5e6b; }
+
+.form-list__button:visited {
+  background: #c36652; }

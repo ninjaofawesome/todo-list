@@ -11,7 +11,7 @@ export default function todoForm({addTodo}){
       <button className="form__button" onClick={() =>{
         addTodo(input.value);
         input.value ='';
-      }}>Add</button>
+      }}>add</button>
     </div>
   );
 };

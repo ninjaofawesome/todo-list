@@ -90,7 +90,8 @@ body::after {
   display: block;
   margin: 0.3125rem auto;
   align-items: center;
-  list-style-type: none; }
+  list-style-type: none;
+  position: relative; }
 
 @media print, screen and (min-width: 40em) {
   .form-list {
@@ -107,7 +108,9 @@ body::after {
   -o-transition: all 500ms ease-out;
   transition: all 500ms ease-out;
   width: 20%;
-  float: right;
+  position: absolute;
+  right: 1.25rem;
+  height: 1.25rem;
   color: #fff;
   background: #c36652;
   border: 0; }

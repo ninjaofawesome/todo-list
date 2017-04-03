@@ -53,6 +53,7 @@
   margin: rem-calc(5) auto;
   align-items: center;
   list-style-type: none;
+  position: relative;
 
   &__item{
     width: 95%;
@@ -63,7 +64,9 @@
     @include link-transition(500ms);
 
     width: 20%;
-    float: right;
+    position: absolute;
+    right: rem-calc(20);
+    height: rem-calc(20);
     color: $white;
     background: $papaya;
     border: 0;
